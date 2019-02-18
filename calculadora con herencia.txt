@@ -1,0 +1,59 @@
+public class Operacion {
+    double n1, n2,res, operacion;
+
+    /**
+     * @param args the command line arguments
+     */
+    public Operacion (double n1, double n2, char operacion) {
+        this.n1 = n1;
+        this.n2 = n2;
+        this.operacion = operacion;
+    }
+    public void  mostrarResultado(){
+        System.out.println(this.n1+""+this.operacion+""+this.n2+"="+this.res);
+    }
+public class Suma extends Operacion {double suma;
+    public Suma (double n1, double n2){ super (n1, n2, '+');
+    this.suma= n1+n2;
+    this.setRes (this.suma);
+    }
+}
+public class Resta extends Operacion {double resta;
+    public Resta (double n1, double n2){ super (n1, n2, '-');
+    this.resta= n1-n2;
+    this.setRes (this.resta);
+    }
+}
+public class Multiplicacion extends Operacion {double multiplicacion;
+    public Multiplicacion (double n1, double n2){ super (n1, n2, '*');
+    this.multiplicacion= n1*n2;
+    this.setRes (this.multiplicacion);
+    }
+}
+public class Division extends Operacion {double division;
+    public Division (double n1, double n2){ super (n1, n2, '/');
+    this.division= n1/n2;
+    this.setRes (this.division);
+    }
+}
+double n1 = 10;
+double n2 = 5;
+
+//suma
+Suma sum = new Suma (n1, n2);
+sum.mostrarResultado();
+//resta
+Resta res = new Resta (n1, n2);
+res.mostrarResultado();
+//multiplicacion
+Multiplicacion mul = new Multiplicacion (n1, n2);
+mul.mostrarResultado();
+//division
+Division siv = new Division (n1, n2);
+div.mostrarResultado();
+
+    }
+        // TODO code application logic here
+    }
+    
+}
